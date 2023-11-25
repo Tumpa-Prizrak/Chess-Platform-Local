@@ -4,7 +4,7 @@ public class Square
 {
     public int Row, File, Index;
     public uint Bitboard;
-    public bool IsNull = false;
+    public bool IsNull;
     
     public Square(int index)
     {
@@ -29,5 +29,13 @@ public class Square
         File = -1;
         Bitboard = 0;
         IsNull = true;
+    }
+
+    public (int, int) Position(bool center = false)
+    {
+        return (
+                Row * Settings.CellSize + (center ? Settings.CellSize / 2 : 0), 
+                File * Settings.CellSize + (center ? Settings.CellSize / 2 : 0)
+            );
     }
 }

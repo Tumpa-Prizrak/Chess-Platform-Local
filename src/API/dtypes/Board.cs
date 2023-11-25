@@ -1,11 +1,9 @@
-using System.Collections.Generic;
-
 namespace ChessPlatform.API.dtypes;
 
 public class Board
 {
-    public Square[] Squares = new Square[64];
-    public List<Piece> Pieces = new ();
+    public readonly Square[] Squares = new Square[64];
+    public readonly List<Piece> Pieces = new ();
     
     public Board()
     {
@@ -13,5 +11,10 @@ public class Board
         {
             Squares[i] = new Square(i);
         }
+    }
+
+    public void AddPiece(Piece piece)
+    {
+        Pieces.Add(piece);
     }
 }

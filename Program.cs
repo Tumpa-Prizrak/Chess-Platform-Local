@@ -1,19 +1,27 @@
 ﻿using Raylib_cs;
+using ChessPlatform.API;
+using ChessPlatform.API.dtypes;
 
 namespace ChessPlatform;
 
-class Program
+static class Program
 {
     public static void Main()
     {
-        Raylib.InitWindow(1280, 720, "Hello World");
+        Raylib.InitWindow(Settings.CellSize * 8, Settings.CellSize * 8, "Chess!");
+        Board board = new Board();
+        board.AddPiece(new Piece(PieceType.King, new Square(0), true));
+        board.AddPiece(new Piece(PieceType.Queen, new Square(1), true));
+        board.AddPiece(new Piece(PieceType.King, new Square(50)));
+        board.AddPiece(new Piece(PieceType.Queen, new Square(51)));
 
         while (!Raylib.WindowShouldClose())
         {
             Raylib.BeginDrawing();
+
             Raylib.ClearBackground(Color.BLACK);
 
-            Raylib.DrawText("Hello, world!", 800 / 2, 480 / 2, 20, Color.WHITE );
+            Drawing.DrawBoard(board);
 
             Raylib.EndDrawing();
         }
