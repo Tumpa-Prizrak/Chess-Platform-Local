@@ -10,8 +10,12 @@
     <ItemGroup>
       <PackageReference Include="Raylib-cs" Version="5.0.0" />
     </ItemGroup>
+
     <ItemGroup>
-	 <Folder Include="src/resources" />
+      <None Update="src\resources\*">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
+
 </Project>
 
