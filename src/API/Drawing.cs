@@ -10,7 +10,7 @@ public class Drawing
         foreach (var square in board.Squares)
         {
             var (x, y) = square.Position();
-            Raylib.DrawRectangle(x, y, Settings.CellSize, Settings.CellSize, (square.Row + square.File) % 2 == 0 ? Color.GRAY : Color.BROWN);
+            Raylib.DrawRectangle(x, y, Settings.CellSize, Settings.CellSize, (square.Row + square.File) % 2 == 0 ? Settings.BgColor1 : Settings.BgColor2);
         }
 
         foreach (var piece in board.Pieces)

@@ -3,7 +3,7 @@ namespace ChessPlatform.API.dtypes;
 public class Square
 {
     public int Row, File, Index;
-    public uint Bitboard;
+    public ulong Bitboard;
     public bool IsNull;
     
     public Square(int index)
@@ -11,7 +11,7 @@ public class Square
         Index = index;
         Row = index / 8;
         File = index % 8;
-        Bitboard = (uint)1 << index;
+        Bitboard = (ulong)1 << index;
     }
 
     public Square(int row, int file)
@@ -19,7 +19,7 @@ public class Square
         Index = row * 8 + file;
         Row = row;
         File = file;
-        Bitboard = (uint)1 << Index;
+        Bitboard = (ulong)1 << Index;
     }
 
     public Square()
