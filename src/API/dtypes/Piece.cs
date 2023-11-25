@@ -18,7 +18,7 @@ public class Piece
     public Texture2D ImagePath()
     {
         var color = IsWhite ? "white" : "black";
-        Image image = Raylib.LoadImage($"ChessPlatform/src/resources/{color}-{PieceType.ToString().ToLower()}.png");
+        Image image = Raylib.LoadImage($"src/resources/{color}-{PieceType.ToString().ToLower()}.png");
         return Raylib.LoadTextureFromImage(image);
     }
 }
