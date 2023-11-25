@@ -1,8 +1,5 @@
 # Chess Platform Local
 
-> **Note**: *this code is in early development stage, so not all features described at this README can be implemented yet. 
-> Join our [discord](https://discord.gg/t9mJMcGEa7) for latest updates!*
-
 ## Description
 A local/testing environment for testing your chess engines via CWS (Chess websockets) protocol or UCI.
 
@@ -12,7 +9,7 @@ Other products in this series:
 - Python module: example of the module for chess engines that is connecting via CWS
 
 ## Contributing
-- Feel free to fork this project and contribute back by submitting PRs! Also join our [discord](https://discord.gg/t9mJMcGEa7) for discussion and help.
+- Feel free to fork this project and contribute back by submitting PRs!
 
 ## Special Thanks
 - Microsoft for providing C# and .NET for building this project
