@@ -8,11 +8,11 @@ public class Piece
     public Square Square;
     public bool IsWhite;
 
-    public Piece(PieceType pieceType = PieceType.None, Square? square = null, bool isWhite = false)
+    public Piece(PieceType pieceType = PieceType.None, Square? square = null, bool? isWhite = null)
     {
         PieceType = pieceType;
         Square = square ?? new Square();
-        IsWhite = isWhite;
+        IsWhite = isWhite ?? false;
     }
 
     public Texture2D ImagePath()
