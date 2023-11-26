@@ -4,26 +4,37 @@ using ChessPlatform.API.dtypes;
 
 namespace ChessPlatform;
 
-static class Program
+static class Program 
 {
-    public static void Main()
+    // The main entry point method
+    public static void Main()  
     {
-        Raylib.SetTraceLogLevel(Settings.LogLevel);
+        // Set the trace log level from settings
+        Raylib.SetTraceLogLevel(Settings.LogLevel);  
+
+        // Initialize the game window 
         Raylib.InitWindow(Settings.CellSize * 8, Settings.CellSize * 8, "Chess!");
 
-        Board board = new Board(Settings.Fen);
+        // Create a new board with the FEN from setting
+        Board board = new Board(Settings.Fen);   
 
-        while (!Raylib.WindowShouldClose())
+        // Game loop
+        while (!Raylib.WindowShouldClose())  
         {
+            // Begin drawing the frame
             Raylib.BeginDrawing();
 
+            // Clear background to black
             Raylib.ClearBackground(Color.BLACK);
 
+            // Draw the chess board
             Drawing.DrawBoard(board);
 
+            // Finish drawing the frame
             Raylib.EndDrawing();
         }
 
+        // Close the game window
         Raylib.CloseWindow();
     }
 }

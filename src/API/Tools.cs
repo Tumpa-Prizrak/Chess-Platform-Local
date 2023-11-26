@@ -2,26 +2,44 @@ using ChessPlatform.API.dtypes;
 
 namespace ChessPlatform.API;
 
+/// <summary>
+/// Provides utility methods for working with chess tools and notation.
+/// </summary>
 public static class Tools
 {
-    public static List<Piece> load_from_fen(string fen) // TODO should be changed to custom data type after implementing en passant, 50 moves draw, etc.
+    /// <summary>
+    /// Parses a FEN (Forsyth-Edwards Notation) string to generate a list of Piece objects on the board
+    /// </summary>
+    /// <param name="fen">The FEN string to parse</param>
+    /// <returns>A list of Piece objects representing the board position</returns>
+    public static List<Piece> load_from_fen(string fen) 
     {
+        // List to hold parsed pieces 
         List<Piece> pieces = new List<Piece>();
-        int row = 0; int file = 0;
-        fen = fen.Split(' ')[0];
+
+        // Current row and file we are parsing
+        int row = 0; 
+        int file = 0;
+
+        // Split FEN string to get just the board position part
+        fen = fen.Split(' ')[0];  
 
         foreach (var c in fen)
         {
-            if (char.IsDigit(c))
+            // If character is a digit, increment file
+            if (char.IsDigit(c))  
             {
                 file += int.Parse(c.ToString());
-            } else if (c == '/')
+            } 
+            else if (c == '/')
             {
+                // Slash indicates new row
                 ++row;
-                file = 0;
+                file = 0; 
             }
             else
             {
+                // Otherwise, parse piece at current position
                 pieces.Add(new Piece(CharToPieceType(char.ToLower(c)), new Square(file, row), !char.IsLower(c)));
                 ++file;
             }
@@ -30,11 +48,17 @@ public static class Tools
         return pieces;
     }
 
+
+    /// <summary>
+    /// Converts a character representing a chess piece to the corresponding PieceType enum value
+    /// </summary>
+    /// <param name="c">The character representing the chess piece</param>
+    /// <returns>The PieceType enum value for the given character</returns>
     public static PieceType CharToPieceType(char c)
     {
         switch (c)
         {
-            case 'p':
+            case 'p':  
                 return PieceType.Pawn;
             case 'r':
                 return PieceType.Rook;
@@ -46,8 +70,11 @@ public static class Tools
                 return PieceType.Queen;
             case 'k':
                 return PieceType.King;
+        
+            // Invalid piece
             default:
                 return PieceType.None;
         }
     }
+
 }
