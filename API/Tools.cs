@@ -1,6 +1,6 @@
-using ChessPlatform.API.dtypes;
+using API.dtypes;
 
-namespace ChessPlatform.API;
+namespace API;
 
 public static class Tools
 {

@@ -1,6 +1,4 @@
-using Raylib_cs;
-
-namespace ChessPlatform.API.dtypes;
+namespace API.dtypes;
 
 public class Piece
 {
@@ -13,13 +11,6 @@ public class Piece
         PieceType = pieceType;
         Square = square ?? new Square();
         IsWhite = isWhite ?? false;
-    }
-
-    public Texture2D ImagePath()
-    {
-        var color = IsWhite ? "white" : "black";
-        Image image = Raylib.LoadImage($"src/resources/{color}-{PieceType.ToString().ToLower()}.png");
-        return Raylib.LoadTextureFromImage(image);
     }
 }
 

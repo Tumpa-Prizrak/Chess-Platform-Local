@@ -1,4 +1,4 @@
-namespace ChessPlatform.API.dtypes;
+namespace API.dtypes;
 
 public class Board
 {

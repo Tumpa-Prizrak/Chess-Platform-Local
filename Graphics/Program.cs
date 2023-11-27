@@ -1,23 +1,23 @@
 ﻿using Raylib_cs;
-using ChessPlatform.API;
-using ChessPlatform.API.dtypes;
+using API.dtypes;
+using System.Drawing;
 
-namespace ChessPlatform;
+namespace Graphics;
 
 static class Program
 {
     public static void Main()
     {
         Raylib.SetTraceLogLevel(Settings.LogLevel);
-        Raylib.InitWindow(Settings.CellSize * 8, Settings.CellSize * 8, "Chess!");
+        Raylib.InitWindow(API.Settings.CellSize * 8, API.Settings.CellSize * 8, "Chess!");
 
-        Board board = new Board(Settings.Fen);
+        Board board = new Board(API.Settings.Fen);
 
         while (!Raylib.WindowShouldClose())
         {
             Raylib.BeginDrawing();
 
-            Raylib.ClearBackground(Color.BLACK);
+            Raylib.ClearBackground(Raylib_cs.Color.BLACK);
 
             Drawing.DrawBoard(board);
 

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{64B6FF07-B7F8-4705-847A-5E9152906C97}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graphics", "Graphics\Graphics.csproj", "{A9E53C7A-694C-4CDC-A09C-B6FC1AD40920}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{64B6FF07-B7F8-4705-847A-5E9152906C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64B6FF07-B7F8-4705-847A-5E9152906C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64B6FF07-B7F8-4705-847A-5E9152906C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64B6FF07-B7F8-4705-847A-5E9152906C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9E53C7A-694C-4CDC-A09C-B6FC1AD40920}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9E53C7A-694C-4CDC-A09C-B6FC1AD40920}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9E53C7A-694C-4CDC-A09C-B6FC1AD40920}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9E53C7A-694C-4CDC-A09C-B6FC1AD40920}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {10E28BEB-6C1F-46AE-8449-752CA93CD9B2}
+	EndGlobalSection
+EndGlobal
